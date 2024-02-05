@@ -1,0 +1,6 @@
+#Node Modules
+/node_modules
+
+#Multi Media
+/cypress/screenshots
+/cypress/videos

@@ -1,0 +1,20 @@
+{
+  "name": "cypress-tst-automations",
+  "version": "1.0.0",
+  "description": "LocalTests",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --browser chrome --e2e"
+  },
+  "keywords": [
+    "test",
+    "cypress",
+    "automation",
+    "e2e"
+  ],
+  "author": "GuillermoGC",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  }
+}
