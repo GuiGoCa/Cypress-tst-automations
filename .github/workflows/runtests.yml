@@ -1,0 +1,24 @@
+# .github/workflows/cypress-ci.yml
+
+name: Cypress E2E Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Cypress Repository
+        uses: actions/checkout@v2
+        with:
+          repository: MemoGC/Cypress
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Cypress Tests
+        run: npx cypress run
