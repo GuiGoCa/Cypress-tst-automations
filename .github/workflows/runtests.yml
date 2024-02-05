@@ -5,7 +5,9 @@ name: Cypress E2E Tests
 on:
   push:
     branches:
-      - main
+      ["main"]
+  
+  workflow_dispatch:    
 
 jobs:
   cypress-tests:
@@ -17,8 +19,8 @@ jobs:
         with:
           repository: MemoGC/Cypress
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Cypress Tests
-        run: npx cypress run
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+        with:
+             command: npx cypress run
+             browser: chrome
