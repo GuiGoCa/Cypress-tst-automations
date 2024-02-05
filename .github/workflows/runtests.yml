@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout Cypress Repository
         uses: actions/checkout@v2
-        with:
-          repository: MemoGC/Cypress
 
       - name: Run Cypress Test
         uses: cypress-io/github-action@v4
